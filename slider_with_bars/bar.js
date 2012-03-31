@@ -7,7 +7,7 @@ Ext.define('Ext.ux.BarInSlider', {
     xtype : 'bar-in-slider',
 
     config: {
-        baseCls: Ext.baseCSSPrefix + 'bar',
+        baseCls: Ext.baseCSSPrefix + 'bar-in-slider',
         docked: 'left',
         value: 10
     },

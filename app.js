@@ -9,7 +9,7 @@ Ext.application({
       items: [
         {
           xtype: "slider-with-bars",
-          value: 70,
+          value: 15,
           barValue: [70, 15],
           id: 'mySlider'
         },
@@ -17,7 +17,7 @@ Ext.application({
           xtype: "button",
           text: "Do something",
           handler: function() {
-            Ext.getCmp("mySlider").setValue([14, 50, 80])
+            Ext.getCmp("mySlider").setBarCls(['', 'x-bar-orange'])
           }
         }
       ]

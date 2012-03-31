@@ -28,6 +28,7 @@ Ext.define('Ext.ux.SliderWithBars', {
 
   config: {
     barValue: 0,
+    barCls: ''
   },
 
   constructor: function(config) {
@@ -42,8 +43,6 @@ Ext.define('Ext.ux.SliderWithBars', {
 
   setBarWidth: function(newValue) {
     var bars = this.getBars();
-    console.log(newValue);
-    console.log(bars);
 
     for (var i = 0; i < bars.length; i++) {
       bars[i].setWidth(newValue[i] * this.offsetValueRatio);
@@ -100,6 +99,25 @@ Ext.define('Ext.ux.SliderWithBars', {
     this.setBarWidth(newValue);
   },
 
+  applyBarCls: function(value) {
+    return Ext.Array.from(value || 0);
+  },
+
+  updateBarCls: function(newValue, oldValue) {
+    oldValue = oldValue || [];
+    var bars = this.getBars();
+
+    for (var i = 0; i < bars.length; i++) {
+      if (!bars[i].getCls())
+        bars[i].setCls(newValue[i]);
+      else {
+        if (oldValue[i])
+          bars[i].removeCls(oldValue[i]);
+
+        bars[i].addCls(newValue[i]);
+      }
+    }
+  },
 
   /**
   * Convience method. Calls {@link #setBarValue}

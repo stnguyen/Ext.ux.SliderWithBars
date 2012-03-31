@@ -9,15 +9,6 @@
 /**
  * @class Ext.ux.SliderWithBars
  * @author Stefan Nguyen
- *
- * This extension wraps the Ext.ux.TouchCalendarView in a Ext.Carousel component and allows the calendar to respond to swipe
- * gestures to switch the displayed period. It works by creating 3 Ext.ux.TouchCalendarViews and dynamically creating/removing
- * views as the user moves back/forward through time.
- *
- * ![Ext.ux.TouchCalendar Screenshot](http://www.swarmonline.com/Ext.ux.TouchCalendar/screenshots/Ext.ux.TouchCalendar-month-ss.png)
- *
- * [Ext.ux.TouchCalendar Demo](http://www.swarmonline.com/wp-content/uploads/Ext.ux.TouchCalendar/examples/Ext.ux.TouchCalendar.html)
- *
  */
 Ext.define('Ext.ux.SliderWithBars', {
   extend: 'Ext.slider.Slider',

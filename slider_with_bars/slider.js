@@ -36,7 +36,7 @@ Ext.define('Ext.ux.SliderWithBars', {
     var bars = this.getBars();
 
     for (var i = 0; i < bars.length; i++) {
-      bars[i].setWidth(newValue[i] * this.offsetValueRatio);
+      bars[i].setWidth(newValue[i] * this.offsetValueRatio + 7);
     }
   },
 

@@ -11,13 +11,22 @@ Ext.application({
           xtype: "slider-with-bars",
           value: 15,
           barValue: [70, 15],
-          id: 'mySlider'
+          id: 'mySlider',
+          barCls: ['', 'x-bar-orange']
         },
         {
           xtype: "button",
-          text: "Do something",
+          text: "More thumbs",
           handler: function() {
-            Ext.getCmp("mySlider").setBarCls(['', 'x-bar-orange'])
+            Ext.getCmp("mySlider").setValues([20, 40])
+          }
+        },
+        {
+          xtype: "button",
+          text: "More bars",
+          handler: function() {
+            Ext.getCmp("mySlider").setBarValues([70, 30, 15]);
+            Ext.getCmp("mySlider").setBarCls(['', 'x-bar-orange', 'x-bar-green']);
           }
         }
       ]

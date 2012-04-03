@@ -1,4 +1,10 @@
 .x-thumb { z-index: 3!important }
+.x-thumb::before {
+  width: 1.2em;
+  height: 1.2em;
+  top: 0.5em;
+left: 0.75em;
+}
 .x-bar-in-slider {
   position: absolute;
   width: auto;
@@ -13,5 +19,3 @@
   border-radius: 0.4em;
   z-index: 2;
 }
-
-.x-bar-orange { background-color: orange }
